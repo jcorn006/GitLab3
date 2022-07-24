@@ -4,7 +4,8 @@ import java.util.NoSuchElementException;
 
 /**
  * A contiguous range of floating point numbers. Mathematically, this
- * is an <a href='https://mathworld.wolfram.com/ClosedInterval.html'>closed interval</a>.
+ * is an <a href='https://mathworld.wolfram.com/ClosedInterval.html'>closed
+ * interval</a>.
  */
 public class Interval {
   private double low;
@@ -44,7 +45,8 @@ public class Interval {
    * Determine whether this interval shares any numbers with another.
    * 
    * @param x another interval
-   * @return true iff both intervals are non-empty and the two intervals have at least one number in common.
+   * @return true iff both intervals are non-empty and the two intervals have at
+   *         least one number in common.
    */
   public boolean overlaps(Interval x) {
     if (empty() || x.empty()) {
@@ -109,14 +111,16 @@ public class Interval {
   }
 
   /**
-   * Compare two Intervals for equality. 
-   * @return true if both are non-empty intervals and their min and max values are respectively equal, or if
-   *     both are empty intervals.
+   * Compare two Intervals for equality.
+   * 
+   * @return true if both are non-empty intervals and their min and max values are
+   *         respectively equal, or if
+   *         both are empty intervals.
    */
   public boolean equals(Object obj) {
     if (obj instanceof Interval) {
-      Interval other = (Interval)obj;
-      if (empty() && other.empty()) 
+      Interval other = (Interval) obj;
+      if (empty() && other.empty())
         return true;
       return (low == other.low) && (high == other.high);
     } else {
@@ -131,5 +135,4 @@ public class Interval {
     return "(" + low + ',' + high + ')';
   }
 }
-// This is from master
 // This is from testBranch
