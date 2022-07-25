@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 
 /**
- * An ordered sequence of disjoint (non-overlapping) intervals.   
+ * An ordered sequence of disjoint (non-overlapping) intervals.
  */
 public class Ranges implements Iterable<Interval> {
 
@@ -65,7 +65,6 @@ public class Ranges implements Iterable<Interval> {
     return total;
   }
 
-  
   /**
    * For debugging purposes. Contents and format are not specified.
    */
@@ -82,6 +81,5 @@ public class Ranges implements Iterable<Interval> {
   public Iterator<Interval> iterator() {
     return remaining.iterator();
   }
-
 
 }
