@@ -65,7 +65,7 @@ task reports (dependsOn: ['test', 'javadoc', 'clonePages']) {
 
 task deployReports (dependsOn: 'reports') {
     group = "Reporting"
-    description  'Copies reports to the gh-pages branch in preparation for a future push to GitHub'
+    description  'Copies reports to the gh-pages branch'
     doLast {
         def pagesDir = "$buildDir/gh-pages"
         def grgit = git.open {
